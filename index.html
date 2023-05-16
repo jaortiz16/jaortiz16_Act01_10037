@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos1.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <header id="header">
+            <img src="./img/logo_ESPE.png" alt="logo" id="logo">
+        </header>
+        <nav id="navBar">
+            <ul>
+                <li><a href="#" id="btn2">Formulario Registro</a></li>
+                <li><a href="#" id="btn3">Formulario Producto</a></li>
+                <li><a href="#">Matriculas</a></li>
+
+            </ul>
+        </nav>
+        <section id="leftMenu">
+            <button class="Boton" id="openModal">LOGIN</button>
+            <button class="Boton">MATRICULA</button>
+        </section>
+        <article id="content">
+            <h2>Aplicación de Tecnologías WEB</h2>
+            <p class="Texto">Estudiante: Andres Ortiz</p>
+            <p class="Texto">NRC: 10037</p>
+            <p class="Texto" style="display: inline;" >Fecha:</p>
+            <p class="Texto" id="fecha_actual" style="display: inline;"></p>
+
+        </article>
+        <aside id="rightMenu"><iframe width="560" height="315" src="https://www.youtube.com/embed/nT2oGZfl1CE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe></aside>
+        <footer id="footer">
+            <a href="html/contacto.html" target="_blank" class="Texto">Contacto PARTE III</a>
+        </footer>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+        <div class="contenedor-formularios modal-content">
+
+            <!-- Links de los formularios -->
+            <ul class="contenedor-tabs">
+                <li class="tab tab-segunda active"><a href="#iniciar-sesion">Iniciar Sesión</a></li>
+                <li class="tab tab-primera" name="registrar"><a href="#registrarse">Registrarse</a></li>
+            </ul>
+
+            <!-- Contenido de los Formularios -->
+            <div class="contenido-tab">
+                <!-- Iniciar Sesion -->
+                <div id="iniciar-sesion">
+                    <h1>Iniciar Sesión</h1>
+                    <form name="FormaLogin" action="" method="post">
+                        <div class="contenedor-input">
+                            <label>
+                                Usuario <span class=>*</span>
+                            </label>
+                            <input type="text" name="usuario">
+                        </div>
+
+                        <div class="contenedor-input">
+                            <label>
+                                Contraseña <span class=>*</span>
+                            </label>
+                            <input type="password" name="clave">
+                        </div>
+                        <input type="submit" id="submitButton" class="button button-block close" value="Iniciar Sesión"
+                            style="background-color: #1ab188;padding: 15px 0;">
+                    </form>
+                </div>
+
+                <!-- Registrarse -->
+                <div id="registrarse">
+                    <h1>Registrarse</h1>
+                    <form action="" method="post" id="registrarse-form">
+                        <div class="fila-arriba">
+                            <div class="contenedor-input">
+                                <label>
+                                    Nombre <span class=>*</span>
+                                </label>
+                                <input type="text" name="nom" required>
+                            </div>
+
+                            <div class="contenedor-input">
+                                <label>
+                                    Apellido <span class=>*</span>
+                                </label>
+                                <input type="text" name="ape" required>
+                            </div>
+                        </div>
+                        <div class="contenedor-input">
+                            <label>
+                                Usuario <span class=>*</span>
+                            </label>
+                            <input type="text" name="usu" required>
+                        </div>
+                        <div class="contenedor-input">
+                            <label>
+                                Email <span class=>*</span>
+                            </label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="contenedor-input">
+                            <label>
+                                Contraseña <span class=>*</span>
+                            </label>
+                            <input type="password" name="pas" required>
+                        </div>
+
+                        <div class="contenedor-input">
+                            <label>
+                                Telefono <span class=>*</span>
+                            </label>
+                            <input type="text" name="telefono" required>
+                        </div>
+
+                        <div class="contenedor-input">
+                            <label>
+                                Empresa <span class=>*</span>
+                            </label>
+                            <input type="text" name="empresa" required>
+                        </div>
+                        <div class="contenedor-input">
+                            <label>
+                                <span class=></span>
+                            </label>
+                            <input type="date" name="fecha" required>
+                        </div>
+
+                        <input type="submit" id="submitButton2" class="button button-block close2" value="Registrarse"
+                            style="background-color: #1ab188;padding: 15px 0;">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <form action="" method="post" name="FormRegistro">
+        <div id="contenido1">
+
+            <fieldset>
+                <legend>DIRECCION DE ENVIO</legend>
+                <label for="principal">Calle Principal</label><br>
+                <input type="text"><br><br>
+                <label for="transversal">Transversal</label><br>
+                <input type="text">
+                <br><br><input type="checkbox" id="entregap">
+                <label for="entregap">Entrega al propietario.</label>
+
+                <br> <input type="checkbox" id="entregat">
+                <label for="entregat">Entrega a un tercero.</label><br><br>
+
+                <label for="canton">Cantones:</label>
+                <select name="canton" id="canton">
+                    <option value="quito">Quito</option>
+                    <option value="guayaquil">Guayaquil</option>
+                    <option value="cuenca">Cuenca</option>
+                    <option value="ambato">Ambato</option>
+                    <option value="loja">Loja</option>
+                </select><br><br>
+                <button id="btnd">ENVIAR DATOS</button>
+            </fieldset>
+
+        </div>
+
+        <div id="contenido2">
+
+            <fieldset>
+                <legend>INFORMACION CONFIDENCIAL</legend>
+                <label for="codigo">Codigo Postal:</label>
+                <input type="text">
+                <br><br><label for="referencia">Referencia de la Direccion:</label><br>
+                <textarea name="referencia" id="referencia" cols="40" rows="5"></textarea>
+                <br> <br> <button id="btng1">Guardar</button>
+            </fieldset>
+
+        </div>
+
+    </form>
+
+
+
+    <form action="" method="post" name="FormProducto">
+        <div id="contenido3">
+        
+          <fieldset>
+            <legend>Datos Basicos</legend>
+            <label for="nombrep">Nombre del Producto:</label>
+            <input type="text">
+            <br><br><label for="descripcion">Descripcion:</label><br>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="5"></textarea><br><br>
+            <label for="foto">Foto:</label><br>
+            <input type="file"><br><br>
+            <input type="checkbox">
+            <label for="info">Añadir informacion confidencial</label>
+         
+        </fieldset>
+        
+        </div>
+              
+            <div id="contenido4">
+        
+              <fieldset><legend>Datos Economicos</legend>
+                <label for="precio">Precio:</label>
+                
+                <input type="number" style="width: 30%;">$ &nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="impuestos">Impuestos:</label>
+        <select id="impuestos">
+          <option value="1">1%</option>
+          <option value="2">2%</option>
+          <option value="3">3%</option>
+          <option value="4">4%</option>
+          <option value="5">5%</option>
+          <option value="6">6%</option>
+          <option value="7">7%</option>
+          <option value="8">8%</option>
+          <option value="9">9%</option>
+          <option value="10">10%</option>
+        </select>
+        <br><br>
+        <label>Promoción:</label>
+        <table width="200">
+          <tr>
+            <td><label>
+              <input type="radio" name="RadioGroup1" value="n" id="RadioGroup1_0">
+              Ninguno</label><br></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="RadioGroup1" value="tp" id="RadioGroup1_1">
+              Transporte gratuito</label><br></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="radio" name="RadioGroup1" value="d5" id="RadioGroup1_2">
+              Descuento 5%</label></td>
+          </tr>
+        </table>
+        
+        
+        
+        
+                </select>
+            </fieldset>
+            <br>
+            <button onclick="enviar(event)">Guardar Cambios</button>
+            <button onclick="limpiar(event)">Borrar los datos introducidos</button>
+        
+            </div>
+        
+            </form>
+
+</body>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+
+</html>
